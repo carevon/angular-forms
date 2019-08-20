@@ -13,8 +13,8 @@ export class UserComponent implements OnInit {
 
     this.formUser = this.formBuilder.group({
       nome: [{value:"Churros", disabled:false}],
-      sobrenome: [{value:"João", disabled:false}],
-      email: [{value:"joão@gmail.com", disabled:false}],
+      sobrenome: [{value:"Churrito", disabled:false}],
+      email: [{value:"churros@gmail.com", disabled:false}],
       telefone: [{value:"+55119656565", disabled:false}]
     })
   }
