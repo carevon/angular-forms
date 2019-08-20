@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
       nome: [{value:"Churros", disabled:false}],
       sobrenome: [{value:"Churrito", disabled:false}],
       email: [{value:"churros@gmail.com", disabled:false}],
-      telefone: [{value:"+55119656565", disabled:false}]
+      telefone:[{value:"+55119656565", disabled:false}]
     })
   }
 
