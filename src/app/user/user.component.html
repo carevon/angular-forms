@@ -4,4 +4,12 @@
     <label for="nome">Nome</label>
     <input type="text" name="nome" id="idUsuario" formControlName="nome">
   </div>
+  <div class="form-group">
+    <label for="nome">Sobrenome</label>
+    <input type="text" name="sobrenome" id="idSobrenome" formControlName="sobrenome">
+  </div>
 </form>
+
+<pre>
+  {{ formUser.value | json }}
+</pre>

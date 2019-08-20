@@ -12,7 +12,7 @@ export class UserComponent implements OnInit {
     //Estrutura do formulario de usuário com dados pré definidos
 
     this.formUser = this.formBuilder.group({
-      nome: [{value:"João", disabled:false}],
+      nome: [{value:"Churros", disabled:false}],
       sobrenome: [{value:"João", disabled:false}],
       email: [{value:"joão@gmail.com", disabled:false}],
       telefone: [{value:"+55119656565", disabled:false}]
