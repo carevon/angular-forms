@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpClient } from '@angular/common/http'; //requisições http
 
 @Component({
   selector: 'app-user', // é a tag pra adicionar um webcomponent
@@ -8,9 +9,12 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class UserComponent implements OnInit {
   formUser:FormGroup; //declarar uma variavel do tipo FormGroup
-  constructor(private formBuilder:FormBuilder) { 
-    //Estrutura do formulario de usuário com dados pré definidos
+  userAPIUrl:string = "https://randomuser.me/api" // api de usuarios aleatorios
+  user:Object; // armazenar o objeto de usuário aleátorio
 
+  constructor(
+    private formBuilder:FormBuilder, private http:HttpClient){ 
+    //Estrutura do formulario de usuário com dados pré definidos
     this.formUser = this.formBuilder.group({
       nome: [{value:"Churros", disabled:false}],
       sobrenome: [{value:"Churrito", disabled:false}],
@@ -22,4 +26,7 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
+  public async novoUsuario(){
+    this.user = await this.http.get(this.userAPIUrl).toPromise()
+  }
 }

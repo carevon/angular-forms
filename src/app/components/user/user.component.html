@@ -1,0 +1,32 @@
+<p>User works!</p>
+<div class="container">
+    <a href="/home">Voltar para home</a>
+  <form [formGroup]="formUser">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input class="form-control" type="text" name="nome" id="idUsuario" formControlName="nome">
+    </div>
+    <div class="form-group">
+      <label for="nome">Sobrenome</label>
+      <input class="form-control" type="text" name="sobrenome" id="idSobrenome" formControlName="sobrenome">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input class="form-control" type="text" name="email" id="idEmail" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="telefone">Telefone</label>
+      <input class="form-control" type="text" name="telefone" id="idTelefone" formControlName="telefone">
+    </div> 
+  </form>
+  <button type="button" name="btnUsuario" (click)="novoUsuario()">Adicionar usuario</button>
+</div>
+<!-- 
+<h1>Meu nome é {{formUser.value.nome}}</h1>
+<h1>Meu sobrenome é {{formUser.value.sobrenome}}</h1>
+<h1>Meu email é {{formUser.value.email}}</h1>
+<h1>Meu telefone é {{formUser.value.telefone}}</h1>
+-->
+<pre>
+    {{ user | json }}
+</pre> 
