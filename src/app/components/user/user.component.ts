@@ -28,5 +28,11 @@ export class UserComponent implements OnInit {
 
   public async novoUsuario(){
     this.user = await this.http.get(this.userAPIUrl).toPromise()
+
+    //chaves do formulário
+    this.formUser.controls['nome'].setValue(this.user['results'][0]['name']['first']);
+    this.formUser.controls['sobrenome'].setValue(this.user['results'][0]['name']['last']);
+    this.formUser.controls['email'].setValue(this.user['results'][0]['email']);
+    this.formUser.controls['telefone'].setValue(this.user['results'][0]['phone']);
   }
 }
